@@ -12,7 +12,7 @@
               placeholder: 'Stock ticker symbol', 
               autofocus: true, 
               class: 'form-control form-control-lg' 
-        )%>
+        ) %>
       </div>
 
       <div class="col-sm-3 no-left-padding">
@@ -20,7 +20,7 @@
               fa_icon('search 2x'),
               type: :submit,
               class: 'btn btn-success'
-        )%>
+        ) %>
       </div>
     </div>
   <% end %>
@@ -28,3 +28,14 @@
 
 <div id="results">
 </div>
+
+<% if @tracked_stocks.present? %>
+  <div class="row">
+    <div class="col-9">
+      <%= render(
+            partial: 'stocks/list', 
+            locals: {stocks: @tracked_stocks}
+      ) %>
+    </div>
+  </div>
+<% end %>
