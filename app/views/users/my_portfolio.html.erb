@@ -38,9 +38,4 @@
       ) %>
     </div>
   </div>
-
-  <div class="text-info">
-    <% tracked_stocks_count = @tracked_stocks.count %>
-    <%= "Total #{'stock'.pluralize(tracked_stocks_count)} tracked: #{tracked_stocks_count}" %>
-  </div>
 <% end %>

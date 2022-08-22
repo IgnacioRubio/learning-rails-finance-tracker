@@ -1,0 +1,12 @@
+<h1>My Friends</h1>
+
+<% if @friends.present? %>
+  <div class="row">
+    <div class="col-9">
+      <%= render(
+            partial: 'friends/list', 
+            locals: {friends: @friends}
+      ) %>
+    </div>
+  </div>
+<% end %>

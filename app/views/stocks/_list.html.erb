@@ -26,3 +26,8 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="text-info">
+  <% stocks_count = stocks.count %>
+  <%= "Total #{'stock'.pluralize(stocks_count)} tracked: #{stocks_count}" %>
+</div>
