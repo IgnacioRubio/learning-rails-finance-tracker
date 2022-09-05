@@ -16,7 +16,7 @@
         <td> 
           <%= link_to(
                 'Stop following',
-                '#', 
+                friendship_path(friend), 
                 method: :delete, 
                 data: {confirm: 'Are you sure?'}, 
                 class: 'btn btn-sm btn-warning' 
