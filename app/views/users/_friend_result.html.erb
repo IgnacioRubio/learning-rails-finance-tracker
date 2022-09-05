@@ -19,7 +19,7 @@
               <% if current_user.not_firends_with?(friend) %>
                 <%= link_to(
                       'Follow friend?', 
-                      '#',
+                      friendships_path(friend_id: friend),
                       class: 'btn btn-sm btn-success',
                       method: :post
                 )%>
