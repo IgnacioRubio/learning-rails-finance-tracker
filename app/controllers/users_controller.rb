@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     @friends = current_user.friends
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def search_friend
     respond_to do |format|
       format.js {

@@ -15,11 +15,16 @@
               <strong>Email:</strong> <%= friend.email %>
             </td>
             <td>
-              <strong>Profile:</strong> <%= link_to 'View Profile', '#', class: 'btn btn-sm btn-success' %>
+              <strong>Profile:</strong> 
+              <%= link_to(
+                    'View Profile', 
+                    user_path(friend), 
+                    class: 'btn btn-sm btn-success' 
+              )%>
               <% if current_user.not_firends_with?(friend) %>
                 <%= link_to(
                       'Follow friend?', 
-                      friendships_path(friend_id: friend),
+                      friendships_path(friend_id: friend.id),
                       class: 'btn btn-sm btn-success',
                       method: :post
                 )%>

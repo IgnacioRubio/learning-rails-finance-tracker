@@ -15,6 +15,11 @@
         <td> <%= friend.last_name %> </td>
         <td> 
           <%= link_to(
+                'View profile',
+                user_path(friend),
+                class: 'btn btn-sm btn-success' 
+          )%>
+          <%= link_to(
                 'Stop following',
                 friendship_path(friend), 
                 method: :delete, 
